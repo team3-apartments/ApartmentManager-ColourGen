@@ -17,13 +17,6 @@ public class ColourGenApplication {
 	public CreateColourGen ColourGen(){
 		return new CreateColourGen();
 	}
-	
-//
-//	@Bean
-//	public AbstractAccountGen accountGenerator(){
-//		return new EightAccountGen();
-//	}
-
 
 }
 
