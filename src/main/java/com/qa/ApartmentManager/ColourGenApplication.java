@@ -4,6 +4,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
+import com.qa.ApartmentManager.ColourGenapi.util.generator.CreateColourGen;
+
 @SpringBootApplication
 public class ColourGenApplication {
 
@@ -11,11 +13,11 @@ public class ColourGenApplication {
 		SpringApplication.run(ColourGenApplication.class, args);
 	}
 
-//
-//	@Bean
-//	public CreateAccount createAccount(){
-//		return new CreateAccount();
-//	}
+	@Bean
+	public CreateColourGen ColourGen(){
+		return new CreateColourGen();
+	}
+	
 //
 //	@Bean
 //	public AbstractAccountGen accountGenerator(){

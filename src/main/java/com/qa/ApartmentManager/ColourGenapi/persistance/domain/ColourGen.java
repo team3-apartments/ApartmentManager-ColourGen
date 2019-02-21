@@ -1,20 +1,22 @@
 package com.qa.ApartmentManager.ColourGenapi.persistance.domain;
 
+import java.awt.Color;
+
 public class ColourGen {
 
-	private String colourCode;
+	private Color colourCode;
 	
 	public ColourGen() {}
 	
-	public ColourGen(String colourCode) {
+	public ColourGen(Color colourCode) {
 		this.setColourCode(colourCode);
 	}
 	
-	public String getColourCode() {
+	public Color getColourCode() {
 		return colourCode;
 	}
 
-	public void setColourCode(String colourCode) {
+	public void setColourCode(Color colourCode) {
 		this.colourCode = colourCode;
 	}
 }
