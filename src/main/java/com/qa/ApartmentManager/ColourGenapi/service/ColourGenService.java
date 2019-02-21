@@ -4,5 +4,5 @@ import java.awt.Color;
 
 public interface ColourGenService {
 	
- Color CreateColourGen();
+ String CreateColourGen();
 }

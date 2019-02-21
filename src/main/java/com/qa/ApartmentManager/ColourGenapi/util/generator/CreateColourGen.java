@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class CreateColourGen {
 	
-	public Color getCreateColourGen() {
+	public String getCreateColourGen() {
 	
 		Random rand = new Random();
 		
@@ -14,7 +14,22 @@ public class CreateColourGen {
 		float b = rand.nextFloat();
 		
 		Color randomColor = new Color(r, g, b);
-	return randomColor;
+		
+		String hex = toHex(randomColor); 
+		
+	return hex;
 	
 	}
+	
+	public static String toHex(Color randomColor) {
+	    return "#" + toBrowserHexValue(randomColor.getRed()) + toBrowserHexValue(randomColor.getGreen()) + toBrowserHexValue(randomColor.getGreen());
+	  }
+
+	  private static String toBrowserHexValue(int number) {
+	    StringBuilder builder = new StringBuilder(Integer.toHexString(number & 0xff));
+	    while (builder.length() < 2) {
+	      builder.append("0");
+	    }
+	    return builder.toString().toUpperCase();
+	  }
 }
