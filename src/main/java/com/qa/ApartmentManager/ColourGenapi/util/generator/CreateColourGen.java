@@ -22,6 +22,10 @@ public class CreateColourGen {
 	}
 	
 	public static String toHex(Color randomColor) {
+		if ((randomColor.getRed() & randomColor.getGreen() & randomColor.getBlue()) == 0) {
+			randomColor.brighter();
+			return "#" + toBrowserHexValue(randomColor.getRed()) + toBrowserHexValue(randomColor.getGreen()) + toBrowserHexValue(randomColor.getGreen());
+		}
 	    return "#" + toBrowserHexValue(randomColor.getRed()) + toBrowserHexValue(randomColor.getGreen()) + toBrowserHexValue(randomColor.getGreen());
 	  }
 
